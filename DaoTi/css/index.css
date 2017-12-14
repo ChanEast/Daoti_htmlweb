@@ -1,0 +1,208 @@
+body {
+	/*text-align: center;*/
+	width: 100%;
+}
+
+.middleDiv {
+	border-left: 1px solid gray;
+	border-right: 1px solid gray;
+	width: 60%;
+	margin: 0 auto;
+}
+
+.character {
+	font-size: 18px;
+	text-align: center;
+	align-self: center;
+}
+
+.editContents {
+	/*width: 550px;*/
+	/*height: 250px;*/
+	padding: 10px;
+	margin-bottom: 5px;
+}
+
+.editDiv {
+	width: 60%;
+	margin: 0 auto;
+	height: 200px;
+	border: 1px solid orange;
+	padding: 10px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+}
+
+.big-title-div {
+	width: 220px;
+	float: left;
+}
+
+.big-title {
+	padding: 0px;
+}
+
+.sub-title-div {
+	width: 118px;
+	float: left;
+	margin-left: 10px;
+}
+
+.question-div {
+	margin-top: 10px;
+	width: 100%;
+	float: left;
+}
+
+.answer-div {
+	margin-top: 10px;
+	width: 40%;
+	float: left;
+	margin-right: 5%;
+	/*margin-right: 10px;*/
+}
+
+.explain-div {
+	margin-top: 10px;
+	width: 40%;
+	float: left;
+}
+
+.confirm-btn {
+	float: right;
+	margin-top: 65px;
+}
+
+.contents {
+	width: 60%;
+	line-height: 26px;
+	padding: 10px;
+	border: 1px solid gray;
+	border-radius: 5px;
+	margin: 0 auto;
+}
+
+.editTable tr {
+	/*border:1px solid gray; */
+	/*padding:0;*/
+	color: lightgray;
+}
+
+.editTable td {
+	border: 1px solid orange !important;
+	/*margin:0;*/
+}
+
+
+/*.editedTable td{
+	border:1px solid white; 
+}*/
+
+.tableContent {
+	/*border-collapse: separate;*/
+	border-collapse: collapse;
+	border-spacing: 1px 5px;
+	/*border:1px solid lightblue;*/
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+.tableContent td {
+	border: 1px solid white;
+	font-size: 16px;
+}
+
+.testword {
+	color: orange;
+}
+
+.test2 td {
+	border: 1px solid lightskyblue;
+}
+
+.tdcss {
+	border: 1px solid #c9302c !important;
+	color: red;
+}
+
+.tdcss-g {
+	border: 1px solid lightgray !important;
+}
+
+.tdcss2 {
+	border: 1px solid #ec971f !important;
+	color: orange;
+}
+
+.question-type {
+	width: 128px;
+}
+
+.hide_td {
+	border-right: 1px solid white;
+}
+
+.begin_td {
+	/*border: 1px solid red;*/
+	background-color: red;
+}
+
+.end_td {
+	background-color: orange;
+}
+
+
+/*去掉下拉栏里的箭头显示*/
+
+
+/*IE 10 */
+
+select::-ms-expand {
+	display: none;
+}
+
+select {
+	/* Chrome */
+	-webkit-appearance: none;
+	/* Firefox */
+	-moz-appearance: none;
+	text-indent: 0.01px;
+	text-overflow: ' ';
+	/* space */
+}
+
+
+/*去掉按住鼠标左键选中文本内容*/
+
+td,
+tr {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.hr_css {
+	/*color:blue;*/
+	border-bottom: 1px solid lightblue;
+	height: 1px;
+}
+
+.fixed-btn {
+	position: fixed;
+	z-index: 1000;
+	right: 67.5%;
+	top: 300px;
+	float: left;
+	width: 60px;
+}
+
+td {
+	border-bottom: 1pt solid gray;
+	padding-bottom: 3px;
+}
+
+tr {
+	border-top: thin solid;
+	border-top: 1pt solid gray;
+}

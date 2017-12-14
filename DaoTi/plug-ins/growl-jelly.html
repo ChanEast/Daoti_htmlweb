@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>tips</title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/ns-default.css" />
+		<link rel="stylesheet" type="text/css" href="css/ns-style-growl.css" />
+		<script src="js/modernizr.custom.js"></script>
+		<!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+
+	<body class="color-9">
+		<div class="container">
+			<header class="codrops-header">
+			</header>
+			<div class="main clearfix">
+				<div class="column">
+					<button id="notification-trigger" class="progress-button">
+						<span class="content">显示提示框</span>
+						<span class="progress"></span>
+					</button>
+				</div>
+			</div>
+			<div style="margin-left:10px;padding-top:-10px;background:#ccc;width: 300px; height: 200px; 	border:1px solid lightgray;text-align: center;">
+				<h3> Text 	Type Selection</h3>
+				<button class="btn btn-default">title</button>
+				<button class="btn btn-default">subject</button>
+			</div>
+		</div>
+		<!-- /container -->
+
+		<script src="js/classie.js"></script>
+		<script src="js/notificationFx.js"></script>
+		<script>
+			var showMessage = '<p>Hello my name is burton chan! I\'m a classic notification but I have some elastic jelliness thanks to <a href="http://bouncejs.com/">bounce.js</a>. </p>';
+
+			(function() {
+				var bttn = document.getElementById('notification-trigger');
+
+				// make sure..
+				bttn.disabled = false;
+
+				bttn.addEventListener('click', function() {
+					// simulate loading (for demo purposes only)
+					classie.add(bttn, 'active');
+					setTimeout(function() {
+
+						classie.remove(bttn, 'active');
+
+						// create the notification
+						var notification = new NotificationFx({
+							message: showMessage,
+							layout: 'growl',
+							effect: 'jelly',
+							type: 'notice', // notice, warning, error or success
+							onClose: function() {
+								bttn.disabled = false;
+							}
+						});
+
+						// show the notification
+						notification.show();
+
+					}, 600);
+
+					// disable the button (for demo purposes only)
+					this.disabled = true;
+				});
+			})();
+		</script>
+	</body>
+
+</html>

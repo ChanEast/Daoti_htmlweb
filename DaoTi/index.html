@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>hello</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	</head>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<body>
+		<h2>试题编辑</h2>
+		<!-- table外的tr，td会影响content内的td取值 -->
+		<!-- <table border="" cellspacing="" cellpadding="">   
+			<tr><td>1</td><td>2</td></tr>
+			<tr style="border: none;"><td style="border-right: 1px solid white;">3</td><td>4</td></tr>
+		</table> -->
+		<div id="editContent" class="editContents form-inline">
+			<div id="editDiv" class="editDiv">
+				<div class="form-group big-title-div">
+					<label class="sr-only" for="exampleInputAmount">一.选择题</label>
+					<div class="input-group">
+						<div class="input-group-addon">标题</div>
+						<input type="search" class="form-control big-title" id="bigtitle" value='一、选择题' placeholder="大标题">
+						<span class="input-group-btn">
+        				<button class="btn btn-default" type="button">更换</button>
+      				</span>
+					</div>
+				</div>
+				<div class="form-group sub-title-div">
+					<div class="input-group">
+						<div class="input-group-addon">题号</div>
+						<input type="number" maxlength="3" class="form-control sub-title" id="notitle" value='1' placeholder="题号">
+						<!--<span class="input-group-btn"> 	
+        				<button class="btn btn-default" type="button">更换</button>
+      				</span>-->
+					</div>
+				</div>
+				<div class="form-group sub-title-div">
+					<div class="input-group question-type">
+						<div class="input-group-addon">题型</div>
+						<!-- <input type="number" class="form-control sub-title" id="titletype" value='1' placeholder="题号"> -->
+						<select id="questionType" class="form-control">
+							<option value='1'>单选题</option>
+							<option value='2'>多选题</option>
+							<option value='3'>填空题</option>
+							<option value='4'>简单题</option>
+							<option value='5'>应用题</option>
+						</select>
+						<!--<span class="input-group-btn"> 	
+        				<button class="btn btn-default" type="button">更换</button>
+      				</span>-->
+					</div>
+				</div>
+				<div class="form-group question-div">
+					<div class="input-group">
+						<div class="input-group-addon ">问题</div>
+						<input type="search" class="form-control sub-title" id="question" value='' placeholder="题目内容">
+						<span class="input-group-btn"> 	
+        				<button class="btn btn-default" type="button" onclick="addQuestion();">添加</button>
+      				</span>
+					</div>	
+				</div>
+				<div class="form-group answer-div">
+					<div class="input-group">
+						<div class="input-group-addon ">答案</div>
+						<input type="search" class="form-control sub-title" id="answer" value='' placeholder="无答案">
+						<span class="input-group-btn"> 	
+        				<button class="btn btn-default" type="button" onclick="addAnswer();">添加</button>
+      				</span>
+					</div>	
+				</div>
+				<div class="form-group explain-div">
+					<div class="input-group">
+						<div class="input-group-addon ">解析</div>
+						<input type="search" class="form-control sub-title" id="explain" value='' placeholder="无解析">
+						<span class="input-group-btn"> 	
+        				<button class="btn btn-default" type="button" onclick="addExplain();">添加</button>
+      				</span>
+					</div>	
+				</div>
+				<button class="btn-success btn confirm-btn" style="float: right;">确认</button>
+			</div>
+			<div id="contents" class='contents'>
+				<table id="content1" class='tableContent editedTable'>
+					<!--<tr><th>Header</th></tr>
+				<tr><td>Data</td></tr>-->
+				</table>
+			</div>
+			<div id="be_btn" style="position:fixed;z-index:1000;left:540px;top:200px;float: right;width: 60px;">
+				<button id='begintag' class="btn-danger btn" style="border:1px solid #c9302c;" onclick="setBegin();">起点</button>
+				<button id='endtag' class="btn-default btn" style="border:1px solid #ec971f;" onclick="setEnd();">终点</button>
+			</div>
+			<!--<div id='buttons'>
+			<input type="button" id='heee' value="clickn" />
+			<input type="button" value="clickn" />
+		</div>-->
+			<button id="btntest" onclick="test();">测试</button>
+	</body>
+	<button onclick="getSelectedText();">选中的文档</button>
+</html>
